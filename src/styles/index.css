@@ -5,8 +5,9 @@ body {
   font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(205, 203, 203);
-  color: rgba(0, 0, 0, 0.472);
+  background-image: url("../../images/sunset-sky2.avif");
+
+  color: rgba(195, 188, 188, 0.945);
 }
 
 code {

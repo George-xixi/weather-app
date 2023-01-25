@@ -4,7 +4,8 @@ import "../styles/ForecastDetails.css";
 
 function ForecastDetails({ forecast }) {
   const { date, humidity, temperature, wind } = forecast;
-  const formattedDate = new Date(date).toDateString();
+  const options = { weekday: "long", month: "long", day: "numeric" };
+  const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
 
   return (
     <div className="forecast-details" data-testid="forecast-details">
@@ -12,16 +13,16 @@ function ForecastDetails({ forecast }) {
         <h2>{formattedDate}</h2>
       </div>
       <div className="forecast-details__max-temperature">
-        max temp: {temperature.max}
+        High: {temperature.max}
         &deg;C
       </div>
       <div className="forecast-details__min-temperature">
-        min temp: {temperature.min}
+        Low: {temperature.min}
         &deg;C
       </div>
-      <div className="forecast-details__humidity">humidity: {humidity}</div>
+      <div className="forecast-details__humidity">Humidity: {humidity}%</div>
       <div className="forecast-details__wind">
-        wind: {wind.speed}mph {wind.direction}
+        Wind: {wind.speed}mph {wind.direction}
       </div>
     </div>
   );
