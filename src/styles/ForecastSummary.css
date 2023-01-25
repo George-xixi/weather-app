@@ -1,0 +1,13 @@
+.forecast-summary {
+font-size: 25px;
+padding:8px;
+border-inline-end: solid rgba(0, 0, 0, 0.242) 2px ;
+}
+.forecast-summary:last-of-type {
+border: 0px;
+}
+
+.forecast-summary__icon > i {
+font-size: 50px;
+padding: 20px;
+}

@@ -1,14 +1,18 @@
 import React from "react";
+import WeatherIcon from "react-icons-weather";
 import PropTypes from "prop-types";
+import "../styles/ForecastSummary.css";
 
 function ForecastSummary(props) {
   const { date, description, icon, temperature } = props;
+  const options = { weekday: "short", month: "short", day: "numeric" };
+  const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
 
   return (
-    <div className="forecast-summary">
-      <div className="forecast-summary__date">{date}</div>
+    <div className="forecast-summary" data-testid="forecast-summary">
+      <div className="forecast-summary__date">{formattedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        {icon}
+        <WeatherIcon name="owm" iconId={icon} />
       </div>
       <div className="forecast-summary__temperature">
         {temperature.max}
