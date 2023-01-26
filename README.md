@@ -1,10 +1,13 @@
 # My Weather App Project
 
-In this project, I will create a weather app. My goal is to learn how to use react and JSX. 
+In this project, I will create a weather app. My goal is to learn how to use react and JSX. I also want to use this project to improve my design skills, since I am using CSS with react for the first time. The project is about 50% completed so far.
 
 ## Progress
 
-So far, I have completed the project set-up, but as the project grows, I will update this section.
+So far, I have added a few stateless components. These take weather forecast data and display it as a 5 day summary forecast with a detailed forecast below.
+I have also styled the app to look modern, clean and easy to read.
+
+Next, I plan to practice state management to add interactivity to my app. As the project grows, I will continue to update this section.
 
 ## Available Scripts
 
@@ -20,8 +23,7 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. In this app, I am testing using Jest.
 
 ### `npm run build`
 
