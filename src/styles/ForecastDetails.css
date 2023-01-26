@@ -1,8 +1,7 @@
-.forecast-details {
-  text-align: center;
-}
 
 .forecast-details > * {
 padding-block-start: 10px;
 font-weight: 600;
+text-align: center;
+font-size: 1.5rem;
 }
