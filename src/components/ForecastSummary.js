@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "../styles/ForecastSummary.css";
 
 function ForecastSummary(props) {
-  const { date, description, icon, temperature } = props;
+  const { date, description, icon, onSelect, temperature } = props;
   const options = { weekday: "short", month: "short", day: "numeric" };
   const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
 
@@ -19,6 +19,9 @@ function ForecastSummary(props) {
         &deg;C
       </div>
       <div className="forecast-summary__description">{description}</div>
+      <button type="button" onClick={() => onSelect(date)}>
+        More
+      </button>
     </div>
   );
 }
@@ -27,6 +30,7 @@ ForecastSummary.propTypes = {
   date: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
   temperature: PropTypes.shape({
     min: PropTypes.number,
     max: PropTypes.number,

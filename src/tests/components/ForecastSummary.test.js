@@ -11,6 +11,7 @@ describe("ForecastSummary", () => {
       min: 12,
       max: 22,
     },
+    onSelect: () => {},
   };
   it("renders", () => {
     const { asFragment } = render(
@@ -49,5 +50,6 @@ describe("ForecastSummary", () => {
       "class",
       "forecast-summary__temperature"
     );
+    expect(getByText("More")).toHaveAttribute("type", "button");
   });
 });
