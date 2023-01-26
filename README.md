@@ -5,7 +5,7 @@ In this project, I will create a weather app. My goal is to learn how to use rea
 ## Progress
 
 So far, I have added a few stateless components. These take weather forecast data and display it as a 5 day summary forecast with a detailed forecast below.
-I have also styled the app to look modern, clean and easy to read.
+I have also styled the app to look modern, clean and easy to read.\
 
 Next, I plan to practice state management to add interactivity to my app. As the project grows, I will continue to update this section.
 
@@ -31,7 +31,6 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 

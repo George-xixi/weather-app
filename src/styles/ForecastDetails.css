@@ -8,4 +8,5 @@ font-size: 1.5rem;
 
 .forecast-details__temperature > *:first-of-type {
   padding-block-end: 10px;
+  margin-block-start: -20px;
 }
