@@ -8,8 +8,18 @@ function SearchForm({ searchText, setSearchText, onSubmit }) {
 
   return (
     <div className="search-form" role="search">
-      <input type="text" onChange={handleInputChange} value={searchText} />
-      <button type="submit" onClick={onSubmit}>
+      <input
+        type="text"
+        onChange={handleInputChange}
+        value={searchText}
+        data-testid="search-input"
+      />
+      <button
+        className="button"
+        type="submit"
+        onClick={onSubmit}
+        data-testid="search-button"
+      >
         <TfiSearch />
       </button>
     </div>
