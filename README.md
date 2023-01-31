@@ -1,49 +1,45 @@
-# My Weather App Project
+# Weather App
 
-In this project, I will create a weather app. My goal is to learn how to use react and JSX. I also want to use this project to improve my design skills, since I am using CSS with react for the first time. The project is about 50% completed so far.
+This is a weather app built using react.js. It is part of the front end module at [Command Shift](https://www.commandshift.co/).
 
-## Progress
+The first thing you should see is this search bar. Try searching for a place in the UK!
+<img alt="screenshot of weather app search bar, text says: Hi, want to search the weather?" src="./images/screenshot-landing.png">
 
-So far, I have added a few stateless components. These take weather forecast data and display it as a 5 day summary forecast with a detailed forecast below.
-I have also styled the app to look modern, clean and easy to read.\
+This is how the app displays the forecast for the searched location:
 
-Next, I plan to practice state management to add interactivity to my app. As the project grows, I will continue to update this section.
+<img alt="screenshot of 5 day weather forecast for Edinbugh" src="./images/screenshot-forecast.png">
 
-## Available Scripts
+## API 
+This app uses the [Weather API](https://cmd-shift-weather-app.onrender.com/) from [Command Shift](https://www.commandshift.co/).
 
-In the project directory, you can run:
+## How to use
+Eventually I will get round to deploying this app.
+For now, or if you want to mess around with the inner workings:
 
-### `npm start`
+### Clone repo
+```bash
+git clone https://github.com/George-xixi/weather-app
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Install dependencies
+```bash
+npm i
+```
+### Launch app locally
+```bash
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### To run tests 
+```bash
+npm test
+```
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode. In this app, I am testing using Jest.
+## Thanks
 
-### `npm run build`
+-Thanks to [Yan](https://github.com/yan-fung) and [Carlos](https://github.com/C-Marfil) for helping me troubleshoot (and copy a little).
+-Thanks to all the tutors at [Command Shift](https://www.commandshift.co/)!
+-Thanks to [Unsplash](https://unsplash.com/) for the beautiful images.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### `npm lint:fix`
-
-Fixes linting errors in code.
+### George - 2023
