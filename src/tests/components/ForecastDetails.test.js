@@ -15,10 +15,12 @@ describe("ForecastSummary", () => {
       min: 12,
     },
   };
+
   it("renders forecast details", () => {
     const { asFragment } = render(<ForecastDetails forecast={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
+
   it("renders correct values for props", () => {
     const { getByTestId, getByText } = render(
       <ForecastDetails forecast={validProps} />

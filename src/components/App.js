@@ -20,9 +20,11 @@ function App() {
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+
   useEffect(() => {
     getForecast(setSelectedDate, setForecasts, setLocation);
   }, []);
+
   const handleCitySearch = () => {
     getForecast(
       searchText,
@@ -32,6 +34,7 @@ function App() {
       setErrorMessage
     );
   };
+
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };

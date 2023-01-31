@@ -13,6 +13,7 @@ describe("ForecastSummary", () => {
     },
     onSelect: () => {},
   };
+
   it("renders", () => {
     const { asFragment } = render(
       <ForecastSummary
@@ -22,8 +23,10 @@ describe("ForecastSummary", () => {
         temperature={validProps.temperature}
       />
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
+
   it("renders correct values for props", () => {
     const { getByText, getByTestId } = render(
       <ForecastSummary

@@ -39,7 +39,9 @@ npm test
 ## Thanks
 
 -Thanks to [Yan](https://github.com/yan-fung) and [Carlos](https://github.com/C-Marfil) for helping me troubleshoot (and copy a little).
+
 -Thanks to all the tutors at [Command Shift](https://www.commandshift.co/)!
+
 -Thanks to [Unsplash](https://unsplash.com/) for the beautiful images.
 
 ### George - 2023

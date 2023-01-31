@@ -26,6 +26,7 @@ describe("ForecastSummaries", () => {
 
   it("renders correctly", () => {
     const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
+
     expect(asFragment()).toMatchSnapshot();
   });
 
