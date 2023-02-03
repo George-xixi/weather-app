@@ -3,8 +3,8 @@ import WeatherIcon from "react-icons-weather";
 import PropTypes from "prop-types";
 import "../styles/ForecastSummary.css";
 
-function ForecastSummary(props) {
-  const { date, description, icon, onSelect, temperature } = props;
+function ForecastSummary({ forecast, onSelect }) {
+  const { date, description, icon, temperature } = forecast;
   const options = { weekday: "short", month: "short", day: "numeric" };
   const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
 
@@ -12,7 +12,7 @@ function ForecastSummary(props) {
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{formattedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />
+        <WeatherIcon name="owm" iconId={icon.toString()} />
       </div>
       <div className="forecast-summary__temperature">
         {temperature.max}
@@ -27,14 +27,16 @@ function ForecastSummary(props) {
 }
 
 ForecastSummary.propTypes = {
-  date: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  temperature: PropTypes.shape({
-    min: PropTypes.number,
-    max: PropTypes.number,
+  forecast: PropTypes.shape({
+    date: PropTypes.number,
+    description: PropTypes.string,
+    icon: PropTypes.number,
+    temperature: PropTypes.shape({
+      max: PropTypes.number,
+      min: PropTypes.number,
+    }),
   }).isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummary;

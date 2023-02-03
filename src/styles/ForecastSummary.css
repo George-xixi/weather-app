@@ -14,7 +14,7 @@
 
 .forecast-summary>button {
   cursor: pointer;
-  margin-block-start: 10px;
+  margin-top: 10px;
   border-radius: 10px;
   border: solid rgba(245, 245, 245, 0.406) 1px;
   transition-property: background-color, color, filter;

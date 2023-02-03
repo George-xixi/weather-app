@@ -25,7 +25,8 @@ function App() {
     getForecast(setSelectedDate, setForecasts, setLocation);
   }, []);
 
-  const handleCitySearch = () => {
+  const handleCitySearch = (e) => {
+    e.preventDefault();
     getForecast(
       searchText,
       setSelectedDate,

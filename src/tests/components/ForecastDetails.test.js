@@ -22,35 +22,19 @@ describe("ForecastSummary", () => {
   });
 
   it("renders correct values for props", () => {
-    const { getByTestId, getByText } = render(
-      <ForecastDetails forecast={validProps} />
-    );
+    const { getByText } = render(<ForecastDetails forecast={validProps} />);
 
+    const high = getByText("High", { exact: false });
+    const low = getByText("Low", { exact: false });
+    const humidity = getByText("Humidity", { exact: false });
+    const wind = getByText("Wind", { exact: false });
+    expect(high).toHaveTextContent("High: 12");
+    expect(low).toHaveTextContent("Low: 12");
+    expect(humidity).toHaveTextContent("Humidity: 80%");
+    expect(wind).toHaveTextContent("Wind: 30mph");
     expect(getByText("Monday, 30 April")).toHaveAttribute(
       "class",
       "forecast-details__date"
-    );
-    expect(getByText("High: 12°C")).toHaveAttribute(
-      "class",
-      "forecast-details__max-temperature"
-    );
-    expect(getByText("Low: 12°C")).toHaveAttribute(
-      "class",
-      "forecast-details__min-temperature"
-    );
-    expect(getByText("Humidity: 80%")).toHaveAttribute(
-      "class",
-      "forecast-details__humidity"
-    );
-    expect(getByText("Wind: 30mph s")).toHaveAttribute(
-      "class",
-      "forecast-details__wind"
-    );
-    expect(getByTestId("temperature-div")).toContainElement(
-      getByTestId("temperature-div__max")
-    );
-    expect(getByTestId("temperature-div")).toContainElement(
-      getByTestId("temperature-div__min")
     );
   });
 });

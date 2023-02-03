@@ -3,18 +3,16 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import SearchForm from "../../components/SearchForm";
 
 describe("ForecastSummary", () => {
-  const validProps = {
-    searchText: "Edinburgh",
-    setSearchText: jest.fn(),
-    onSubmit: jest.fn(),
-  };
+  const searchText = "Edinburgh";
+  const setSearchText = jest.fn();
+  const onSubmit = jest.fn();
 
   it("renders forecast details", () => {
     const { asFragment } = render(
       <SearchForm
-        searchText={validProps.searchText}
-        setSearchText={validProps.setSearchText}
-        onSubmit={validProps.onSubmit}
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={onSubmit}
       />
     );
 
@@ -24,9 +22,9 @@ describe("ForecastSummary", () => {
   it("renders search form correctly", () => {
     render(
       <SearchForm
-        searchText={validProps.searchText}
-        setSearchText={validProps.setSearchText}
-        onSubmit={validProps.onSubmit}
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={onSubmit}
       />
     );
     const buttons = screen.getAllByRole("button");
@@ -41,13 +39,13 @@ describe("ForecastSummary", () => {
   it("calls correct function by clicking button", () => {
     render(
       <SearchForm
-        searchText={validProps.searchText}
-        setSearchText={validProps.setSearchText}
-        onSubmit={validProps.onSubmit}
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={onSubmit}
       />
     );
     fireEvent.click(screen.getByTestId("search-button"));
 
-    expect(validProps.onSubmit).toHaveBeenCalled();
+    expect(onSubmit).toHaveBeenCalled();
   });
 });

@@ -8,7 +8,7 @@ exports[`App renders App component correctly 1`] = `
     <h1>
       Hi, want to search the weather?
     </h1>
-    <div
+    <form
       class="search-form"
       role="search"
     >
@@ -38,7 +38,7 @@ exports[`App renders App component correctly 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </form>
     <div
       class="forecast-summaries"
     />

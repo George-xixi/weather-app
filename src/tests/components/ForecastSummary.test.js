@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import ForecastSummary from "../../components/ForecastSummary";
 
 describe("ForecastSummary", () => {
@@ -11,17 +11,12 @@ describe("ForecastSummary", () => {
       min: 12,
       max: 22,
     },
-    onSelect: () => {},
+    onSelect: jest.fn(),
   };
 
   it("renders", () => {
     const { asFragment } = render(
-      <ForecastSummary
-        date={validProps.date}
-        description={validProps.description}
-        icon={validProps.icon}
-        temperature={validProps.temperature}
-      />
+      <ForecastSummary forecast={validProps} onSelect={validProps.onSelect} />
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -29,12 +24,7 @@ describe("ForecastSummary", () => {
 
   it("renders correct values for props", () => {
     const { getByText, getByTestId } = render(
-      <ForecastSummary
-        date={validProps.date}
-        description={validProps.description}
-        icon={validProps.icon}
-        temperature={validProps.temperature}
-      />
+      <ForecastSummary forecast={validProps} onSelect={validProps.onSelect} />
     );
 
     expect(getByText("Mon, 30 Apr")).toHaveAttribute(
@@ -54,5 +44,15 @@ describe("ForecastSummary", () => {
       "forecast-summary__temperature"
     );
     expect(getByText("More")).toHaveAttribute("type", "button");
+  });
+
+  it("calls correct function by clicking button", () => {
+    render(
+      <ForecastSummary forecast={validProps} onSelect={validProps.onSelect} />
+    );
+    const buttonsArray = screen.getByText("More");
+    fireEvent.click(buttonsArray);
+
+    expect(validProps.onSelect).toHaveBeenCalled();
   });
 });

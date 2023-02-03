@@ -4,25 +4,22 @@ import { TfiSearch } from "react-icons/tfi";
 import "../styles/SearchForm.css";
 
 function SearchForm({ searchText, setSearchText, onSubmit }) {
-  const handleInputChange = (event) => setSearchText(event.target.value);
+  const handleInputChange = (event) => {
+    setSearchText(event.target.value);
+  };
 
   return (
-    <div className="search-form" role="search">
+    <form className="search-form" role="search" onSubmit={onSubmit}>
       <input
         type="text"
         onChange={handleInputChange}
         value={searchText}
         data-testid="search-input"
       />
-      <button
-        className="button"
-        type="submit"
-        onClick={onSubmit}
-        data-testid="search-button"
-      >
+      <button className="button" type="submit" data-testid="search-button">
         <TfiSearch />
       </button>
-    </div>
+    </form>
   );
 }
 
