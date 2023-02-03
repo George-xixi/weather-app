@@ -13,30 +13,25 @@ function ForecastDetails({ forecast }) {
       <div className="forecast-details__date">
         <h2 className="forecast-details__date">{formattedDate}</h2>
       </div>
+
       <div
-        className="forecast-details__temperature"
-        data-testid="temperature-div"
+        className="forecast-details__max-temperature"
+        data-testid="temperature-div__max"
       >
-        <div
-          className="forecast-details__max-temperature"
-          data-testid="temperature-div__max"
-        >
-          High: {temperature.max}
-          &deg;C
-        </div>
-        <div
-          className="forecast-details__min-temperature"
-          data-testid="temperature-div__min"
-        >
-          Low: {temperature.min}
-          &deg;C
-        </div>
+        High: {temperature.max}
+        &deg;C
+      </div>
+      <div
+        className="forecast-details__min-temperature"
+        data-testid="temperature-div__min"
+      >
+        Low: {temperature.min}
+        &deg;C
       </div>
       <div className="forecast-details__humidity">Humidity: {humidity}%</div>
       <div className="forecast-details__wind">
         Wind: {wind.speed}mph
-        <WindDirection windDirection={wind.direction} />
-        Direction: {wind.direction}
+        <WindDirection windDirectionString={wind.direction} />
       </div>
     </div>
   );
