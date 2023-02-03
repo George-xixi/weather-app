@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/ForecastDetails.css";
+import WindDirection from "./WindDirection";
 
 function ForecastDetails({ forecast }) {
   const { date, humidity, temperature, wind } = forecast;
@@ -33,7 +34,9 @@ function ForecastDetails({ forecast }) {
       </div>
       <div className="forecast-details__humidity">Humidity: {humidity}%</div>
       <div className="forecast-details__wind">
-        Wind: {wind.speed}mph {wind.direction}
+        Wind: {wind.speed}mph
+        <WindDirection windDirection={wind.direction} />
+        Direction: {wind.direction}
       </div>
     </div>
   );

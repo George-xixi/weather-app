@@ -4,11 +4,13 @@ import "../styles/LocationDetails.css";
 
 function LocationDetails(props) {
   const { city, country, errorMessage } = props;
-  return errorMessage ? (
-    <h1>{errorMessage}</h1>
-  ) : (
-    <h1>{`${city}, ${country}`}</h1>
-  );
+  if (errorMessage) {
+    return <h1>{errorMessage}</h1>;
+  }
+  if (city === "" && country === "") {
+    return <h1>Hi, want to search the weather?</h1>;
+  }
+  return <h1>{`${city}, ${country}`}</h1>;
 }
 
 LocationDetails.defaultProps = {

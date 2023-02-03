@@ -10,8 +10,8 @@ import SearchForm from "./SearchForm";
 function App() {
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({
-    city: "Hi",
-    country: "want to search the weather?",
+    city: "",
+    country: "",
   });
   const [selectedDate, setSelectedDate] = useState(0);
   const [searchText, setSearchText] = useState("");
@@ -39,11 +39,13 @@ function App() {
     setSelectedDate(date);
   };
 
+  const { city, country } = location;
+
   return (
     <div className="weather-app">
       <LocationDetails
-        city={location.city}
-        country={location.country}
+        city={city}
+        country={country}
         errorMessage={errorMessage}
       />
       <SearchForm
