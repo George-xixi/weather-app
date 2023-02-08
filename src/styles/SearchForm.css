@@ -21,7 +21,7 @@
 
 
 .search-form>button {
-  width: 10%;
+  width: 15%;
   height: 100%;
   border: solid rgba(245, 245, 245, 0.406) 1px;
   border-bottom-right-radius: 10px;
@@ -40,4 +40,14 @@
   color: rgba(255, 255, 255, 0.774);
   border-color: rgba(255, 255, 255, 0.774);
   background-color: #25272895;
+}
+
+@media (max-width:650px) {
+  .search-form {
+    display: inline;
+  }
+
+  .search-form>button {
+    height: 44px;
+  }
 }

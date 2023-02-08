@@ -7,7 +7,7 @@ function LocationDetails({ city, country, errorMessage }) {
     return <h1>{errorMessage}</h1>;
   }
   if (city === "" && country === "") {
-    return <h1>Hi, want to search the weather?</h1>;
+    return <h1>Search the weather in any UK town or city.</h1>;
   }
   return <h1>{`${city}, ${country}`}</h1>;
 }

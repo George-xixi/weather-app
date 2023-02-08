@@ -6,3 +6,9 @@ h1 {
   margin: 0;
   display: inline-block;
 }
+
+@media (max-width:650px) {
+  h1 {
+    width: 100%;
+  }
+}

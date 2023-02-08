@@ -2,3 +2,9 @@
   margin: 0 20px;
   padding: 30px;
 }
+
+@media (max-width:700px) {
+.weather-app{
+  margin-inline:0px;
+}
+}

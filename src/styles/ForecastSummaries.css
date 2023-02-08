@@ -5,3 +5,14 @@
   text-align: center;
   margin-inline: 30px;
 }
+
+@media (max-width:700px) {
+  .forecast-summaries {
+    padding-top: 25px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-right: -20px;
+    margin-left: -20px;
+  
+  }
+}
