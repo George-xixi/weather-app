@@ -50,4 +50,8 @@
   .search-form>button {
     height: 44px;
   }
+
+  .search-form>input {
+    height: 44px;
+  }
 }
