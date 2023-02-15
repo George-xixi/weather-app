@@ -49,9 +49,12 @@
 
   .search-form>button {
     height: 44px;
+    text-align: left;
   }
 
   .search-form>input {
     height: 44px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }
