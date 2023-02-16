@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("../../images/sunset-sky2.avif");
   background-size: cover;
+  background-color: rgb(123, 54, 131);
   color: rgba(248, 248, 248, 0.692);
 }
 
