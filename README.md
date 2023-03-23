@@ -12,9 +12,11 @@ This is how the app displays the forecast for the searched location:
 ## API 
 This app uses the [Weather API](https://cmd-shift-weather-app.onrender.com/) from [Command Shift](https://www.commandshift.co/).
 
-## How to use
-Eventually I will get round to deploying this app.
-For now, or if you want to mess around with the inner workings:
+## Check it out!
+
+[My Weather App](https://george-aldington-weather.netlify.app/) is now live! 
+
+## To work on the code:
 
 ### Clone repo
 ```bash
